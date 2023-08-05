@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Registration Form with Image Upload</title>
+ 
+</head>
+<body>
+  <div class="registration-container">
+    <h2>Car Registration Form</h2>
+    <div>{{resMessage}}</div>
+    <form enctype="multipart/form-data">
+      <label for="car_make">Car Name:</label>
+      <input type="text"[(ngModel)]="name" id="car_make" name="car_make" required>
+
+      <label for="car_model">Car Model:</label>
+      <input type="text" [(ngModel)]="degree"id="car_model" name="car_model" required>
+
+      <label for="car_year">Year:</label>
+      <input type="text"[(ngModel)]="spl" id="car_year" name="car_year" required>
+
+      <label for="license_plate">License plate:</label>
+      <input type="text"[(ngModel)]="exp" id="license_plate" name="license_plate" required>
+
+      <label for="owner_name">price:</label>
+      <input type="text"[(ngModel)]="address" id="owner_name" name="owner_name" required>
+
+      <label for="owner_contact">warranty:</label>
+      <input type="text"[(ngModel)]="phoneno" id="owner_contact" name="owner_contact" required>
+
+      <!-- <label for="car_image">Car Image:</label>
+      <input type="file" id="car_image" name="car_image" accept="image/*" required> -->
+      <div class="container row">
+        <div class="col-md-6">
+            <input type="file" (change)="onFileChanged($event)">
+    
+        </div>
+    </div>
+       
+
+     
+
+      <button type="submit"(click)="prdSubmitt()">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
